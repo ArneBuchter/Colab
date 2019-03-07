@@ -1,57 +1,4 @@
 
-
- a.ex2:hover, a.ex2:active {font-size: 150%;}
- 
- header {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
-   background-color: #282E34;
-   color: silver;
-   
- }
-
- h1 {
-   font-family: 'Permanent Marker', cursive;
-   font-size: 38px;
- }
-
- div  {
-   font-family: 'Permanent Marker', cursive;
-   
- }
-
- .grid {
-   grid-column: 1 / 3;
-   grid-row: 2 / 3;
-   justify-self: center;
-   align-self: center;
-   
- }
-
- .footergrid {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
-   background-color: #282E34;
-   color: #ddd;
- }
-
- .footermenu {
-   grid-column: 1 / 3;
-   grid-row: 2 / 3;
-   justify-self: center;
-   align-self: center;
- }
-
- li {
-   list-style-type: none;
-   float: left;
-   letter-spacing: 5px;
-   font-family: fantasy;
- }
-
-
  
  /* Turn off parallax scrolling for tablets and phones */
  @media only screen and (max-device-width: 1024px) {
@@ -61,10 +8,13 @@
    .joinbox{
      visibility: hidden;
    }
+
  }
 /* this css document is made using BEM */
 
-/*reset browser------------------------------------------------*/
+/*set browser------------------------------------------------*/
+
+a.ex2:hover, a.ex2:active {font-size: 150%;}
 
 body, html {
   height: 100%;
@@ -74,12 +24,49 @@ body, html {
 
 }
 
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+  color: crimson;
+  justify-self: flex-start;
+  
+}
+
+div  {
+  font-family: 'Permanent Marker', cursive;
+  
+}
+
 *{
   box-sizing: border-box;
 
 }
 
 /* block --------------------------------------------------------*/
+.headergrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: #282E34;
+  color: silver;
+  
+}
+
+.login {
+  justify-self: center;
+  align-self: center;
+  font-family: fantasy;
+  color: silver;
+  font-size: 45px;
+}
+
+.grid {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: center;
+  
+}
 
 .joinbox {
   position: fixed;
@@ -106,6 +93,14 @@ body, html {
   text-align: justify;
 }
 
+.footergrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: #282E34;
+  color: #ddd;
+}
+
 
  /* element -------------------------------------------------------*/
 
@@ -125,6 +120,29 @@ body, html {
   width: 100%;
   text-align: center;
   color: #000;
+}
+
+.grid__li {
+  list-style-type: none;
+  float: left;
+  letter-spacing: 5px;
+  font-family: fantasy;
+}
+
+
+.footergrid__somelogo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: flex-end;
+  align-self: center;
+  
+ }
+
+.footergrid__footermenu {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: center;
 }
 
  /* modifier ------------------------------------------------------*/
@@ -174,4 +192,9 @@ body, html {
 .caption__border--fighters {
   background-color:transparent;
   font-size:25px;color: crimson;
+}
+
+.somelogo--img {
+  width: 38px;
+  
 }
